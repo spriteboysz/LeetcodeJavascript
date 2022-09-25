@@ -9,9 +9,9 @@
  * @param {number} n
  * @return {number}
  */
-var smallestEvenMultiple = function(n) {
+var smallestEvenMultiple = function (n) {
     return n % 2 === 0 ? n : n * 2;
 };
 
-console.log(smallestEvenMultiple(4))
-console.log(smallestEvenMultiple(5))
+console.log(smallestEvenMultiple(4));
+console.log(smallestEvenMultiple(5));

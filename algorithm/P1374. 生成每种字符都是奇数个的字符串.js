@@ -9,10 +9,10 @@
  * @param {number} n
  * @return {string}
  */
-var generateTheString = function(n) {
+var generateTheString = function (n) {
     var ss = '';
     return n % 2 === 1 ? ss + 'a'.repeat(n) : ss + 'a'.repeat(n - 1) + 'b';
 };
 
-console.log(generateTheString(4))
-console.log(generateTheString(5))
+console.log(generateTheString(4));
+console.log(generateTheString(5));

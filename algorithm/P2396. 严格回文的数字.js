@@ -13,4 +13,4 @@ var isStrictlyPalindromic = function(n) {
     return false;
 };
 
-console.log(isStrictlyPalindromic(9))
+console.log(isStrictlyPalindromic(9));
