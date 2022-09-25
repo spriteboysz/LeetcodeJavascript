@@ -5,6 +5,17 @@
  * Description: 
  */
 
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var sumNums = function (n) {
+    if (n === 1) {
+        return 1;
+    } else {
+        return sumNums(n - 1) + n;
+    }
+};
 
-console.log();
+console.log(sumNums(9));
  
