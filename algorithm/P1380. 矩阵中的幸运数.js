@@ -11,7 +11,7 @@
  */
 var luckyNumbers = function (matrix) {
     let minrow = [], maxcol = [];
-    minrow = matrix.map(v => Math.min(...v));
+    minrow = matrix.map(row => Math.min(...row));
     for (let i = 0; i < matrix[0].length; i++) {
         let col = []
         for (let j = 0; j < matrix.length; j++) {
