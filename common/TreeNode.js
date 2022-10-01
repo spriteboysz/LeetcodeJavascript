@@ -7,35 +7,33 @@
 
 //Definition for a binary tree node.
 function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val)
-    this.left = (left === undefined ? null : left)
-    this.right = (right === undefined ? null : right)
+    this.val = (val === undefined ? 0 : val);
+    this.left = (left === undefined ? null : left);
+    this.right = (right === undefined ? null : right);
 }
 
 /**
  * Encodes a tree to a single string.
  *
- * @param {TreeNode} root
  * @return {string}
  */
-var serialize = function (root) {
-    let arr = []
-    if (root === null) return '[]'
-    let queue = [root]
+TreeNode.prototype.toString = function () {
+    if (this === null) return '[]';
+    let values = [], queue = [this];
     while (queue.length > 0) {
         if (queue[0] === null) {
-            arr.push(null)
+            values.push(null);
         } else {
-            arr.push(queue[0].val)
-            queue.push(queue[0].left)
-            queue.push(queue[0].right)
+            values.push(queue[0].val);
+            queue.push(queue[0].left);
+            queue.push(queue[0].right);
         }
-        queue.shift()
+        queue.shift();
     }
-    while (arr[arr.length - 1] === null) {
-        arr.pop()
+    while (values[values.length - 1] === null) {
+        values.pop();
     }
-    return '[' + arr.join(',') + ']'
+    return '[' + values.join(',') + ']';
 };
 
 /**
@@ -44,36 +42,35 @@ var serialize = function (root) {
  * @param {string} data
  * @return {TreeNode}
  */
-var deserialize = function (data) {
-    if (data.length === 2) return null
-    let arr = data.slice(1, -1).split(',').map(item => item === '' ? null : parseInt(item))
-    let root = new TreeNode(arr[0])
-    arr.shift()
+TreeNode.create = function (data) {
+    if (data.length === 2) return null;
+    let values = data.slice(1, -1).split(',').map(item => item === '' ? null : parseInt(item));
+    let root = new TreeNode(values[0]);
+    values.shift();
     let queue = [root]
-    while (arr.length > 0) {
-        if (arr[0] !== null) {
-            let left = new TreeNode(arr[0])
-            queue[0].left = left
-            queue.push(left)
+    while (values.length > 0) {
+        if (values[0] !== null) {
+            let left = new TreeNode(values[0]);
+            queue[0].left = left;
+            queue.push(left);
         } else {
-            queue[0].left = null
+            queue[0].left = null;
         }
-        arr.shift()
-        if (arr.length > 0) {
-            if (arr[0] !== null) {
-                let right = new TreeNode(arr[0])
-                queue[0].right = right
-                queue.push(right)
+        values.shift()
+        if (values.length > 0) {
+            if (values[0] !== null) {
+                let right = new TreeNode(values[0]);
+                queue[0].right = right;
+                queue.push(right);
             } else {
-                queue[0].right = null
+                queue[0].right = null;
             }
-            arr.shift()
+            values.shift();
         }
-        queue.shift()
+        queue.shift();
     }
-    return root
+    return root;
 };
 
-
-console.log();
+module.exports = TreeNode;
  
