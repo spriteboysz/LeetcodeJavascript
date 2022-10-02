@@ -22,7 +22,7 @@ TreeNode.prototype.toString = function () {
     let values = [], queue = [this];
     while (queue.length > 0) {
         if (queue[0] === null) {
-            values.push(null);
+            values.push("null");
         } else {
             values.push(queue[0].val);
             queue.push(queue[0].left);
@@ -30,7 +30,7 @@ TreeNode.prototype.toString = function () {
         }
         queue.shift();
     }
-    while (values[values.length - 1] === null) {
+    while (values[values.length - 1] === "null") {
         values.pop();
     }
     return '[' + values.join(',') + ']';
@@ -43,31 +43,29 @@ TreeNode.prototype.toString = function () {
  * @return {TreeNode}
  */
 TreeNode.create = function (data) {
-    if (data.length === 2) return null;
-    let values = data.slice(1, -1).split(',').map(item => item === '' ? null : parseInt(item));
-    let root = new TreeNode(values[0]);
-    values.shift();
-    let queue = [root]
-    while (values.length > 0) {
-        if (values[0] !== null) {
-            let left = new TreeNode(values[0]);
-            queue[0].left = left;
-            queue.push(left);
-        } else {
-            queue[0].left = null;
+    if (data.length <= 2) return null;
+    const values = data.substring(1, data.length - 1).split(",");
+    const root = new TreeNode(parseInt(values[0]));
+
+    const queue = [root];
+    let i = 1
+    while (queue) {
+        const node = queue.shift();
+        if (!node) break;
+        // 第一个是左节点，节点为空，直接跳过
+        if (values[i] !== "null") {
+            node.left = new TreeNode(parseInt(values[i]));
+            queue.push(node.left);
         }
-        values.shift()
-        if (values.length > 0) {
-            if (values[0] !== null) {
-                let right = new TreeNode(values[0]);
-                queue[0].right = right;
-                queue.push(right);
-            } else {
-                queue[0].right = null;
-            }
-            values.shift();
+        i += 1;
+        if (!values[i]) break;
+        // 第二个是右节点，节点为空，直接跳过
+        if (values[i] !== "null") {
+            node.right = new TreeNode(parseInt(values[i]));
+            queue.push(node.right);
         }
-        queue.shift();
+        i += 1;
+        if (!values[i]) break;
     }
     return root;
 };
