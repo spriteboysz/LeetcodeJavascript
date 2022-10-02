@@ -18,6 +18,7 @@ function TreeNode(val, left, right) {
  * @return {string}
  */
 TreeNode.prototype.toString = function () {
+    if (this === undefined) return "undefined tree error";
     if (this === null) return '[]';
     let values = [], queue = [this];
     while (queue.length > 0) {
