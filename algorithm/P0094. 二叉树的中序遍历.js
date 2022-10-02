@@ -25,7 +25,6 @@ var inorderTraversal = function (root) {
     return values;
 };
 
-let root = TreeNode.create("[1,2,3]");
-console.log(root)
+let root = TreeNode.create("[1,null,2,3]");
 console.log(inorderTraversal(root));
  
