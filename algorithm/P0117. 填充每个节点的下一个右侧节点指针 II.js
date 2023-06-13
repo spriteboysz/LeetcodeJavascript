@@ -34,5 +34,6 @@ var connect = function (root) {
     return root;
 };
 
-console.log();
+let root = new Node(0, null, null, null)
+console.log(connect(root));
  
