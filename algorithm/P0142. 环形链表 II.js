@@ -19,5 +19,5 @@ var detectCycle = function (head) {
     return null;
 };
 
-console.log();
+console.log(detectCycle(ListNode.create("[1,2,3,4]")).toString());
  
