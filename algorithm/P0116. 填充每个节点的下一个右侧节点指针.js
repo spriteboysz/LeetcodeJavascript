@@ -34,4 +34,4 @@ var connect = function (root) {
 };
 
 
- 
+connect(null);

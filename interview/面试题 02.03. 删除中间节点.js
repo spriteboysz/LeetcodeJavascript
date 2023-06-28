@@ -5,12 +5,8 @@
  * Description: 
  */
 
+let ListNode = require('../common/ListNode.js');
 
-//Definition for singly-linked list.
-function ListNode(val) {
-    this.val = val;
-    this.next = null;
-}
 
 /**
  * @param {ListNode} node
@@ -21,5 +17,5 @@ var deleteNode = function (node) {
     node.next = node.next.next;
 };
 
-// console.log(deleteNode(ListNode(5)));
+deleteNode(ListNode.create("[5]"));
  

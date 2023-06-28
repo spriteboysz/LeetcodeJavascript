@@ -8,7 +8,7 @@
 /**
  * @param {string} s
  * @param {number} k
- * @param {character} fill
+ * @param {string} fill
  * @return {string[]}
  */
 var divideString = function (s, k, fill) {

@@ -26,5 +26,5 @@ var maxDepth = function (root) {
 };
 
 let root = [1, null, 3, 2, 4, null, 5, 6]
-console.log(maxDepth(root));
+console.log(maxDepth(null));
  

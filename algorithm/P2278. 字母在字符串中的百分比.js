@@ -7,7 +7,7 @@
 
 /**
  * @param {string} s
- * @param {character} letter
+ * @param {string} letter
  * @return {number}
  */
 var percentageLetter = function (s, letter) {

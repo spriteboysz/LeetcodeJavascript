@@ -22,7 +22,7 @@ var levelOrder = function (root) {
     while (queue.length) {
         let size = queue.length, level = [];
         for (let i = 0; i < size; i++) {
-            node = queue.shift();
+            let node = queue.shift();
             level.push(node.val);
             for (const child of node.children) {
                 queue.push(child);
@@ -33,5 +33,5 @@ var levelOrder = function (root) {
     return values;
 };
 
-console.log();
+console.log(levelOrder(null));
  

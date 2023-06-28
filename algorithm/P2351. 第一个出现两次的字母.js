@@ -7,7 +7,7 @@
 
 /**
  * @param {string} s
- * @return {character}
+ * @return {string}
  */
 var repeatedCharacter = function (s) {
     let set = new Set();

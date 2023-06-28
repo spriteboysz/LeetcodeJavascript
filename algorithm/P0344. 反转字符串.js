@@ -6,7 +6,7 @@
  */
 
 /**
- * @param {character[]} s
+ * @param {string[]} s
  * @return {void} Do not return anything, modify s in-place instead.
  */
 var reverseString = function (s) {
@@ -14,5 +14,5 @@ var reverseString = function (s) {
     console.log(s);
 };
 
-//console.log(reverseString(s = ["H", "a", "n", "n", "a", "h"]));
+reverseString(s = ["H", "a", "n", "n", "a", "h"]);
  

@@ -10,19 +10,19 @@
  * @return {number[]}
  */
 var luckyNumbers = function (matrix) {
-    let minrow = [], maxcol = [];
-    minrow = matrix.map(row => Math.min(...row));
+    let rows, cols = [];
+    rows = matrix.map(row => Math.min(...row));
     for (let i = 0; i < matrix[0].length; i++) {
         let col = []
         for (let j = 0; j < matrix.length; j++) {
             col.push(matrix[j][i])
         }
-        maxcol.push(Math.max(...col));
+        cols.push(Math.max(...col));
     }
     let lucky = [];
     for (let i = 0; i < matrix.length; i++) {
         for (let j = 0; j < matrix[0].length; j++) {
-            if (matrix[i][j] === minrow[i] && matrix[i][j] === maxcol[j]) {
+            if (matrix[i][j] === rows[i] && matrix[i][j] === cols[j]) {
                 lucky.push(matrix[i][j]);
             }
         }

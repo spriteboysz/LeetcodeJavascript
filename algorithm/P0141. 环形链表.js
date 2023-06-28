@@ -21,5 +21,5 @@ var hasCycle = function (head) {
     return false;
 };
 
-console.log();
+console.log(hasCycle(ListNode.create("[1,2,3,4]")));
  

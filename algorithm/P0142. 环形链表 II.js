@@ -5,6 +5,8 @@
  * Description: 
  */
 
+let ListNode = require('../common/ListNode.js');
+
 /**
  * @param {ListNode} head
  * @return {ListNode}

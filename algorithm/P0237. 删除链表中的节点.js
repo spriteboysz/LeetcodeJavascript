@@ -5,13 +5,9 @@
  * Description: 
  */
 
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
+
+let ListNode = require('../common/ListNode.js');
+
 /**
  * @param {ListNode} node
  * @return {void} Do not return anything, modify node in-place instead.
@@ -21,5 +17,5 @@ var deleteNode = function (node) {
     node.next = node.next.next;
 };
 
-console.log();
+deleteNode(ListNode.create("[1]"));
  

@@ -29,4 +29,9 @@ var getIntersectionNode = function (headA, headB) {
 };
 
 
+headA = ListNode.create("[1,2,3]")
+headB = ListNode.create("[1,2,4]")
+console.log(getIntersectionNode(headA, headB));
+
+
  

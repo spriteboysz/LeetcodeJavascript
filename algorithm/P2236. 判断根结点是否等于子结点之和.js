@@ -5,13 +5,7 @@
  * Description: 
  */
 
-
-//Definition for a binary tree node.
-function TreeNode(val, left, right) {
-    this.val = (val === undefined ? 0 : val)
-    this.left = (left === undefined ? null : left)
-    this.right = (right === undefined ? null : right)
-}
+let TreeNode = require('../common/TreeNode.js');
 
 /**
  * @param {TreeNode} root
@@ -21,5 +15,5 @@ var checkTree = function (root) {
     return root.val === root.left.val + root.right.val;
 };
 
-console.log(checkTree("[5,3,2]"));
+console.log(checkTree(TreeNode.create("[5,3,2]")));
  
