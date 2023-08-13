@@ -9,10 +9,11 @@
 // This is the CustomFunction's API interface.
 // You should not implement it, or speculate about its implementation
 function CustomFunction() {
-    /*
-    @param {integer, integer} x, y
-    @return {Number}
-    */
+    /**
+     * @param {Number} x
+     * @param {Number} y
+     * @return {Number}
+     */
     this.f = function (x, y) {
         return x + y;
     };
