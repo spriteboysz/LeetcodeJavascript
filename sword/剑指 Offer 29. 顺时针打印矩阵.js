@@ -1,0 +1,46 @@
+/*
+ * Author: Deean
+ * Date: 2023-09-18 23:46
+ * FilePath: sword
+ * Description:剑指 Offer 29. 顺时针打印矩阵
+ */
+
+/**
+ * @param {number[][]} matrix
+ * @return {number[]}
+ */
+var spiralOrder = function (matrix) {
+    var nums = [];
+    if (matrix.length === 0 || matrix[0].length === 0) {
+        return nums;
+    }
+    var left = 0, right = matrix[0].length - 1, top = 0, bottom = matrix.length - 1;
+    while (true) {
+        for (let i = left; i <= right; i++) {
+            nums.push(matrix[top][i]);
+        }
+        top++;
+        if (top > bottom) break;
+
+        for (let i = top; i <= bottom; i++) {
+            nums.push(matrix[i][right]);
+        }
+        right--;
+        if (left > right) break;
+
+        for (let i = right; i >= left; i--) {
+            nums.push(matrix[bottom][i]);
+        }
+        bottom--;
+        if (top > bottom) break;
+
+        for (let i = bottom; i >= top; i--) {
+            nums.push(matrix[i][left]);
+        }
+        left++;
+        if (left > right) break;
+    }
+    return nums;
+};
+
+console.log(spiralOrder(matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]));
