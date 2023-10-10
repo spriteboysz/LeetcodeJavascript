@@ -23,5 +23,5 @@ var addBinary = function (a, b) {
     return sum.reverse().join("");
 };
 
-console.log(addBinary(a = "11", b = "1"));
+console.log(addBinary(dataA = "11", dataB = "1"));
  

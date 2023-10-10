@@ -27,7 +27,7 @@ var countGoodTriplets = function (arr, a, b, c) {
     return cnt;
 };
 
-let arr = [1, 1, 2, 2, 3], a = 0, b = 0, c = 1;
-console.log(countGoodTriplets(arr, a, b, c));
-console.log(countGoodTriplets(arr = [3, 0, 1, 1, 9, 7], a = 7, b = 2, c = 3));
+let arr = [1, 1, 2, 2, 3], dataA = 0, dataB = 0, c = 1;
+console.log(countGoodTriplets(arr, dataA, dataB, c));
+console.log(countGoodTriplets(arr = [3, 0, 1, 1, 9, 7], dataA = 7, dataB = 2, c = 3));
  

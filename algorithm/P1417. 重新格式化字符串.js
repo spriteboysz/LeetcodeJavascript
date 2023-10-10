@@ -20,13 +20,13 @@ var reformat = function (s) {
     }
     if (Math.abs(letters.length - digits.length) > 1) return "";
     if (digits.length > letters.length) {
-        a = digits;
-        b = letters;
+        dataA = digits;
+        dataB = letters;
     } else {
-        a = letters;
-        b = digits;
+        dataA = letters;
+        dataB = digits;
     }
-    return a.map((el, i) => [el, (b[i] || '')]).flat().join('');
+    return dataA.map((el, i) => [el, (dataB[i] || '')]).flat().join('');
 
 };
 

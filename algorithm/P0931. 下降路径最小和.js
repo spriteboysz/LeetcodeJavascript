@@ -26,4 +26,4 @@ var minFallingPathSum = function (matrix) {
     return Math.min(...matrix[n - 1]);
 };
 
-console.log(minFallingPathSum(matrix = [[2, 1, 3], [6, 5, 4], [7, 8, 9]]));
+console.log(minFallingPathSum(plants = [[2, 1, 3], [6, 5, 4], [7, 8, 9]]));

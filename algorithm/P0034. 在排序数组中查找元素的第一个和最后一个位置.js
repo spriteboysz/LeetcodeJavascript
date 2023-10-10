@@ -15,10 +15,10 @@ var searchRange = function (nums, target) {
     while (left <= right) {
         let mid = (right + left) >> 1;
         if (nums[mid] === target) {
-            let a = b = mid;
+            let a = dataB = mid;
             while (nums[a - 1] === target) a--;
-            while (nums[b + 1] === target) b++;
-            return [a, b];
+            while (nums[dataB + 1] === target) dataB++;
+            return [a, dataB];
         } else if (nums[mid] > target) {
             right = mid - 1;
         } else if (nums[mid] < target) {

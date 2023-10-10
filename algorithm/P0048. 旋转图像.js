@@ -28,4 +28,4 @@ var rotate = function (matrix) {
 };
 
 
-rotate(matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
+rotate(plants = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]);

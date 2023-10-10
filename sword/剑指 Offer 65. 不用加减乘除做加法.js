@@ -18,5 +18,5 @@ var add = function (a, b) {
     }
     return a;
 };
-console.log(add(a = 1, b = 1));
+console.log(add(dataA = 1, dataB = 1));
  

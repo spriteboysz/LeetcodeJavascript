@@ -20,4 +20,4 @@ var kthSmallest = function (matrix, k) {
     return nums.sort((a, b) => a - b)[k - 1];
 };
 
-console.log(kthSmallest(matrix = [[1, 5, 9], [10, 11, 13], [12, 13, 15]], k = 8));
+console.log(kthSmallest(plants = [[1, 5, 9], [10, 11, 13], [12, 13, 15]], k = 8));

@@ -29,4 +29,4 @@ var setZeroes = function (matrix) {
     console.log(matrix);
 };
 
-setZeroes(matrix = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]);
+setZeroes(plants = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]);

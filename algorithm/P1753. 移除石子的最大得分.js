@@ -18,4 +18,4 @@ var maximumScore = function (a, b, c) {
     return Math.min(sum - maxVal, Math.floor(sum / 2));
 };
 
-console.log(maximumScore(a = 2, b = 4, c = 6));
+console.log(maximumScore(dataA = 2, dataB = 4, c = 6));
